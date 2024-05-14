@@ -1,0 +1,11 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000vh;
+}
+
+.img132 {
+  max-width: 100%;
+  height: auto;
+}

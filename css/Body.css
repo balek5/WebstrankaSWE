@@ -1,0 +1,223 @@
+.upper_body {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  margin-top: 10rem;
+}
+
+.text-container, .text-container p, .list {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size : 400px;
+}
+:root{
+  --maincolor:#2ec8a6;
+  --secondcolor:#2ec8a6;
+  --thirdcolor:#2ec8a6;
+  --textcolor: #000000;
+}
+body {
+  background-image: url("../fre.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+  .image-wrapper{
+    margin-left: 350px;
+  }
+
+  .text-container h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #2c463f;
+
+  }
+.text-container p {
+  font-size: 20px;
+  margin-left: 252px;
+  color: #000000;
+  line-height: 1.5;
+}
+.text-container .bunkablabla{
+  font-weight: bold;
+  color: #1c8f75;
+  font-size: 30px;
+}
+}
+.text-container .p1{
+  margin-top: 20px;
+  font-size: 25px;
+  margin-left: 252px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.text-container .p1 .bunka-ma {
+  font-weight: bold;
+  color: #1c8f75;
+  font-size: 30px;
+
+}
+
+.text-container .nucleus {
+  color: var(--maincolor);
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 30px;
+
+}
+.text-container .Jadro {
+  color:var(--maincolor);
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 30px;
+
+}
+.text-container .Lyzomy {
+  color: var(--maincolor);
+  font-weight: bold;
+  font-size: 30px;
+
+
+}
+.text-container .služia {
+  color: var(--maincolor);
+  font-weight: bold;
+  font-size: 30px;
+
+}
+.text-container .Mitochondria {
+  color: var(--maincolor);
+  font-weight: bold;
+  font-size: 30px;
+
+}
+.text-container .Protoplazma {
+  color: var(--maincolor);
+  weight: bold;
+  font-size: 30px;
+
+
+}
+.text-container .Delisa {
+  color: var(--maincolor);
+  font-weight: bold;
+  font-size: 30px;
+
+
+}
+.text-container .Cytoplazmatickamem {
+  color: var(--maincolor);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+
+.text-container .image1{
+  margin-left: 256Px;
+
+}
+
+.text-container .list {
+  font-size: 30px;
+}
+
+
+.text-container .h12{
+  font-size: 30px;
+  color: #2c463f;
+  text-align: center;
+  margin-left: 240px;
+  margin-top: 40px;
+
+}
+.text-container h3{
+  font-size: 30px;
+  color: var(--maincolor);
+  text-align: left;
+  margin-left: 256px;
+  margin-top: 50px;
+}
+.text-container .list1{
+  font-size: 22px;
+  margin-left: 256px;
+}
+.text-container .image2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.text-container .image3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-container .image4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-container .image5 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-container .image6 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-container .sklada{
+  font-size: 30px;
+  color: var(--maincolor);
+  margin-top: 40px;
+  font-weight: bold;
+
+}
+
+
+
+
+.sidebar {
+  height: 100%;
+  font-size : 30px;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding-top: 20px;
+  border-right: 2px solid var(--maincolor);
+  border-right: 2px solid var(--maincolor);
+}
+
+
+.sidebar h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding-top: 90px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.sidebar ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+.sidebar ul li a:hover {
+  transform: scale(1.1);
+}
+
+
+
+
