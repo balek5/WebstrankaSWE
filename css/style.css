@@ -5,6 +5,7 @@
   --secondcolor:#2ec8a6;
   --thirdcolor:#2ec8a6;
   --textcolor: #000000;
+
 }
 *{
   margin:0;
@@ -195,15 +196,6 @@ header{
   color: white !important;
 }
 
-.home .home-right-content{
-  flex: 1 1 50rem;
-}
-
-.home .home-right-content img{
-  width: 100%;
-  margin-top: 4rem;
-}
-
 .technology{
   padding: 3rem 7%;
 }
@@ -244,12 +236,6 @@ header{
   width: 100%;
 }
 
-
-/* .inner-technology:hover{
-    background: var(--maincolor);
-
-} */
-
 .inner-technology:hover i{
 
   color: white;
@@ -274,8 +260,6 @@ header{
   line-height: 2.5rem;
   padding: 1rem 0;
 }
-
-
 
 /* home section will end */
 
@@ -325,20 +309,20 @@ header{
 .about-right-content h2{
   font-size: 30px;
   padding: 2rem 0;
-  color: black;
+  color: var(--maincolor);
   font-weight: bolder;
   line-height: 4rem;
 }
 .about-right-content p{
-  font-size: 1.5rem;
+  font-size: 20px;
   padding: 1rem 0;
   color: var(--textcolor);
   font-family: "Inter", sans-serif;
   text-align: left;
-  line-height: 2.5rem;
+  line-height: 1.5em;
 }
 .aboutsec-content{
-  line-height: 2.5rem !important;
+  line-height: 1.5rem ;
 }
 .aboutbtn{
   padding: 1.5rem 3rem;
@@ -363,7 +347,7 @@ header{
 }
 .service-heading h2{
   font-size: 40px;
-  color: #2ec8a6;
+  color: var(--maincolor);
   text-align: center;
   padding: 1rem 0;
   margin-bottom: 3rem;
@@ -379,12 +363,15 @@ header{
   flex: 1 1 300px;
   padding: 3rem 2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border: 2px solid var(--textcolor);
+  border: 2px solid var(--textcolor)
+
 
 }
 .inner-services:hover{
   transform: translateY(-10px);
   border-bottom: 2px solid var(--maincolor);
+  background-color: var(--maincolor); /* Replace with the color you want */
+
   background-color: #f5f5f5;
 }
 .inner-services:hover .service-icon{
@@ -405,11 +392,11 @@ header{
   line-height: 100px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 1px solid var(--maincolor);
+  border: 2px solid var(--maincolor);
   background-color: #f5f5f5;
 }
 .service-icon i{
-  font-size: 3rem;
+  font-size: 3em;
   color: var(--maincolor);
   padding: 1rem;
 }
@@ -508,6 +495,7 @@ header{
 .footer-content{
   flex: 1 1 200px;
   text-align: center;
+  margin-bottom: 40px;
 }
 .footer-content h1{
   color: #000000;
@@ -594,7 +582,7 @@ header{
   margin: 0 auto;
   position: relative;
   background: #fff;
-  padding: 25px 50px 35px;
+  padding: 25px 30px 25px;
   border-radius: 25px;
 }
 .rating-box header {
@@ -608,12 +596,14 @@ header{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 .stars {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  height: max-content;
+  width: 100%;
 }
 
 .stars i {
@@ -633,5 +623,93 @@ header{
 .Rateus {
   text-align: center;
   color: var(--maincolor);
-  font-size: 50px;  ;
+  font-size: 40px;  ;
+}
+.main-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: var(--maincolor);
+  color: #000000;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px ;
+}
+.dropdown-account {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-account-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+.dropdown-account-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-account-content a:hover {
+  background-color: var(--secondcolor);
+}
+
+.dropdown-account:hover .dropdown-account-content {
+  display: block;
+}
+
+.dropdown-account:hover .btn {
+  background-color: var(--secondcolor);
 }

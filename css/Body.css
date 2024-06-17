@@ -4,27 +4,26 @@
   margin-top: 10rem;
 }
 
+
 .text-container, .text-container p, .list {
   color: #000000;
   background-color: rgba(255, 255, 255, 0.5);
   font-size : 400px;
 }
 :root{
-  --maincolor:#2ec8a6;
+  --maincolor: #02725c;
   --secondcolor:#2ec8a6;
   --thirdcolor:#2ec8a6;
   --textcolor: #000000;
 }
-body {
-  background-image: url("../fre.jpg");
-  background-size: cover;
+body {background-size: cover;
   background-attachment: fixed;
 }
 
   .image-wrapper{
     margin-left: 350px;
   }
-
+/* text designed /*/
   .text-container h1 {
     text-align: center;
     font-size: 40px;
@@ -175,7 +174,7 @@ body {
   font-weight: bold;
 
 }
-
+/* text designed /*/
 
 
 
@@ -192,7 +191,7 @@ body {
   border-right: 2px solid var(--maincolor);
 }
 
-
+/* sider bar section /*/
 .sidebar h2 {
   color: #ffffff;
   text-align: center;
