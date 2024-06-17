@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulár</title>
+  <link rel="stylesheet" href="cssss.css">
+</head>
+<body>
+
+<form>
+  <fieldset>
+    <legend>Osobné údaje</legend>
+    <label for="meno">Meno:</label>
+    <input type="text" id="meno" name="meno" placeholder="Roman">
+    <br>
+
+    <label for="priezvisko">Priezvisko:</label>
+    <input type="text" id="priezvisko" name="priezvisko" placeholder="Bodka">
+    <br>
+
+    <label for="mobil">Mobil:</label>
+    <input type="tel" id="mobil" name="mobil" placeholder="+421123456789" pattern="[0-9]*">
+    <br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="čojaviem@gmail.com"    >
+    <br>
+
+    <label for="vek">Vek:</label>
+    <select id="vek" name="vek">
+      <option value="0-1">0 - 1</option>
+      <option value="1-1">1- 1</option>
+      <option value="2-3">2 - 3</option>
+      <option value="3-4">3 - 4</option>
+      <option value="5+">4+</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Prevádzka</legend>
+    <input type="radio" id="Kysuca" name="prevadzka" value="bratislava" checked>
+    <label for="Kysuca">Kysuca</label>
+    <input type="radio" id="Modra" name="prevadzka" value="banskabystrica">
+    <label for="Modra">Modra</label>
+    <br>
+
+    <label for="vzdelanie">Vzdelanie:</label>
+    <textarea id="vzdelanie" name="vzdelanie" placeholder="TU NAM NAPISTE VASE VZDIELANIE"></textarea>
+    <br>
+
+    <label for="prax">Prax:</label>
+    <textarea id="prax" name="prax" placeholder="tu nam napište čo mate za prax"></textarea>
+    <br>
+
+    <label for="pozicia">Pozícia:</label>
+    <select id="pozicia" name="pozicia">
+      <option value="kuchar">IT</option>
+      <option value="casnik">dizajner</option>
+      <option value="manazer">masažer</option>
+    </select>
+    <br>
+
+    <label>Jazyky:</label>
+    <br>
+    <input type="checkbox" id="anglicky" name="jazyky" value="anglicky">
+    <label for="anglicky">Anglický</label>
+    <br>
+    <input type="checkbox" id="nemecky" name="jazyky" value="nemecky">
+    <label for="nemecky">Japonsky</label>
+    <br>
+    <input type="checkbox" id="taliansky" name="jazyky" value="taliansky">
+    <label for="taliansky">Indicky</label>
+    <br>
+    <input type="checkbox" id="spanielsky" name="jazyky" value="spanielsky">
+    <label for="spanielsky">Slovensky</label>
+    <br>
+    <input type="checkbox" id="madarsky" name="jazyky" value="madarsky">
+    <label for="madarsky">Latina</label>
+  </fieldset>
+
+  <label>
+    <input type="checkbox" name="suhlas" value="suhlas">
+    Súhlasím so spracovaním OU
+  </label>
+  <br>
+
+  <button type="submit">Odošli</button>
+  <button type="reset">reset</button>
+</form>
+
+</body>
+</html>

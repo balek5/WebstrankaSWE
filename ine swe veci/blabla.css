@@ -1,0 +1,48 @@
+body {
+  background-color: #e79afc;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.header-text {
+  font-size: 40px;
+  margin-bottom: 460px;
+  color: #b000e1;
+  border-bottom: 4px solid #c500ff;
+}
+
+
+caption.nadpis{
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: black;
+  font-size: 50px;
+  align-items : center;
+}
+table {
+  text-align: center;
+  border-spacing:  0;
+  width: 40%;
+}
+
+th, td {
+  border: 2px solid #000000;
+  padding: 5px;
+  font-size: 25px;
+  font-width: bold;
+  background-color: #dad0d0;
+}
+
+th {
+  background-color: #cf81e5;
+}
+
+ol {
+  color:black;
+  font-size: 20px;
+  margin-bottom: 300px;
+  position: relative;
+  list-style-type: lower-alpha;
+  left: -320px;
+}
