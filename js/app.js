@@ -31,3 +31,4 @@ document.querySelectorAll('.flip-card').forEach(card => {
     this.querySelector('.flip-card-inner').classList.toggle('flipped');
   });
 });
+

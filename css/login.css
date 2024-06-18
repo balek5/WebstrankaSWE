@@ -21,10 +21,12 @@ section
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 2px;
-  flex-wrap: wrap;
   overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 section::before
 {
@@ -88,7 +90,7 @@ section .signin .content
 section .signin .content h2
 {
   font-size: 2em;
-  color: #2ec8a6;;
+    color: #2ec8a6;;
   text-transform: uppercase;
 }
 section .signin .content .form

@@ -14,6 +14,8 @@
 <!-- header section -->
 <header>
   <div class="logo">Human Anatomy</div>
+  <div id="menu-bars" class="fas fa-bars"></div>
+
   <nav class="navbar">
     <a href="#Home">Home</a>
     <a href="#About">About</a>
@@ -35,7 +37,6 @@
     <a href="#Contact">Contact</a>
   </nav>
   <div class="right-icons">
-    <div id="menu-bars" class="fas fa-bars"></div>
     <div class="dropdown-account">
       <div class="btn">Vytvorte si učet</div>
       <div class="dropdown-account-content">
@@ -201,7 +202,6 @@
     <i class="fa-solid fa-star"></i>
   </div>
 </div>
-<!--rating box -->
 
 <!-- footer -->
 <div class="main-footer">
@@ -217,7 +217,9 @@
           <a href="">Formular 5</a>
         </div>
       </div>
+
       <!-- social media links-->
+
       <div class="footer-content">
         <h1>Social media </h1>
         <div class="link">
@@ -253,6 +255,26 @@
     </div>
   </div>
 </div>
+<script>
+  if(window.location.href.split("?token=")[1]?.split("&")[0]) {
+    document.cookie = `token=${window.location.href.split("?token=")[1]?.split("&")[0]}`;
+    window.location = window.location.href.split("?token=")[0];
+  }
+  function logout() {
+    document.cookie = "token=";
+    window.location = window.location.href;
+  }
+
+  if((document.cookie.split("token=")[1]?.split(";")[0]||"") != "") {
+    fetch("https://lukas.epxol.eu/api/getInfo", {method: "GET", headers: {"auth-token": document.cookie.split("token=")[1]?.split(";")[0]}}).then(res => res.json()).then(res => {
+      if(res.status == "OK") {
+        document.querySelector(".dropdown-account").innerHTML = `<div class="btn">${res.username}</div><div class="dropdown-account-content"><a onclick="logout()">Logout</a></div>`;
+      }
+    })
+  }
+</script>
+
+
 <!-- footer ended -->
 </body>
 </html>

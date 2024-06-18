@@ -27,6 +27,21 @@
     </div>
   </div>
 </section> <!-- partial -->
-<script src="../js/idklogin.js"></script>
+<script>
+  document.querySelector("input[type='submit']").addEventListener('click', async () => {
+    var username = document.querySelector("input[name='username']").value;
+    var password = document.querySelector("input[name='password']").value;
+
+    fetch("https://lukas.epxol.eu/api/login", {method: "GET", headers: {"auth-username": username, "auth-password": password}}).then(res => res.json()).then(res => {
+      if(res.status == "Forbidden") {
+        document.getElementById("errorMessage").innerHTML = "Auth server response:" + res.message;
+        document.querySelector("input[name='password']").value = "";
+      } else if(res.status == "OK") {
+        window.location.href = "/human%20anatomy2%20(1)/index.html?token="+res.token;
+      }
+    })
+  })
+</script>
+
 </body>
 </html>

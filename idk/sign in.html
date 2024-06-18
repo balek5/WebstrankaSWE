@@ -32,17 +32,18 @@
       <h2>Sign Up</h2>
       <div class="form">
         <div class="inputBox">
-          <input type="text" required> <i>Username</i>
+          <input type="text" required name="username"> <i>Username</i>
         </div>
         <div class="inputBox">
-          <input type="email" required> <i>Email</i>
+          <input type="email" required name="mail"> <i>Email</i>
         </div>
         <div class="inputBox">
-          <input type="password" required> <i>Password</i>
+          <input type="password" required name="password"> <i>Password</i>
         </div>
         <div class="links">
           <a href="../idk/login.html">Sign In</a>
         </div>
+        <div id="errorMessage" style="color: red;"></div>
         <div class="inputBox">
 
           <input type="submit" value="Sign Up">
@@ -52,7 +53,22 @@
     </div>
   </div>
 </section>
-<!-- partial -->
-<script src="../js/idklogin.js"></script>
+<script>
+  document.querySelector("input[type='submit']").addEventListener('click', async () => {
+    var username = document.querySelector("input[name='username']").value;
+    var mail = document.querySelector("input[name='mail']").value;
+    var password = document.querySelector("input[name='password']").value;
+
+    fetch("https://lukas.epxol.eu/api/register", {method: "GET", headers: {"auth-username": username, "auth-mail": mail, "auth-password": password}}).then(res => res.json()).then(res => {
+      if(res.status == "Forbidden") {
+        document.getElementById("errorMessage").innerHTML = "Auth server response:" + res.message;
+        document.querySelector("input[name='password']").value = "";
+      } else if(res.status == "OK") {
+        window.location.href = "/human%20anatomy2%20(1)/index.html?token="+res.token;
+      }
+    })
+  })
+</script>
+
 </body>
 </html>
